@@ -1,32 +1,28 @@
 <template>
-  <div class="hello">
-    <h1>currency card</h1>
+  <div class="card">
+    {{item.id}}
+    {{item.name}}
   </div>
 </template>
 
 <script>
 export default {
   name: 'Card',
-  props: {
-    msg: String
-  }
+  props: ['item']
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.card {
+  border: 1px solid black;
+  padding: 5px 0;
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 5px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+.card:hover {
+  border: 1px solid blue;
+  cursor: pointer;
+  background: lightblue;
 }
 </style>
