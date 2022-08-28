@@ -7,13 +7,18 @@
       {{item.symbol.toUpperCase()}}
       €{{item.market_data.current_price.eur}}
     </div>
+    <LineChart :item="item" />
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import LineChart from '@/components/Line.vue'
 
 export default {
+  components: {
+    LineChart
+  },
   data () {
     return {
       apiUrl: process.env.VUE_APP_API_URL,
