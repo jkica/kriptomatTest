@@ -5,7 +5,7 @@
       <img :src="item.image.small" :alt="`${item.id}-image`">
       {{item.id}}
       {{item.symbol.toUpperCase()}}
-      {{item.market_data.current_price.eur}}€
+      €{{item.market_data.current_price.eur}}
     </div>
   </div>
 </template>
